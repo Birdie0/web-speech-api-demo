@@ -42,6 +42,7 @@ function App() {
       >
         <label htmlFor="pitch">
           Pitch
+          {' '}
           {pitch}
         </label>
         <input
@@ -56,6 +57,7 @@ function App() {
 
         <label htmlFor="volume">
           Rate
+          {' '}
           {rate}
         </label>
         <input
@@ -70,6 +72,7 @@ function App() {
 
         <label htmlFor="volume">
           Volume
+          {' '}
           {volume}
         </label>
         <input
