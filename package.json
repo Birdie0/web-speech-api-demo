@@ -15,14 +15,17 @@
     "water.css": "^2.1.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "@antfu/eslint-config": "^2.12.1",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.23",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.8"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
