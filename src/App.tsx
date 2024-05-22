@@ -40,11 +40,7 @@ function App() {
           speak()
         }}
       >
-        <label htmlFor="pitch">
-          Pitch
-          {' '}
-          {pitch}
-        </label>
+        <label htmlFor="pitch">Pitch {pitch}</label>
         <input
           id="volume"
           type="range"
@@ -52,14 +48,10 @@ function App() {
           max={2}
           step={0.1}
           value={pitch}
-          onChange={event => setPitch(event.target.valueAsNumber)}
+          onChange={(event) => setPitch(event.target.valueAsNumber)}
         />
 
-        <label htmlFor="volume">
-          Rate
-          {' '}
-          {rate}
-        </label>
+        <label htmlFor="volume">Rate {rate}</label>
         <input
           id="volume"
           type="range"
@@ -67,14 +59,10 @@ function App() {
           max={10}
           step={0.1}
           value={rate}
-          onChange={event => setRate(event.target.valueAsNumber)}
+          onChange={(event) => setRate(event.target.valueAsNumber)}
         />
 
-        <label htmlFor="volume">
-          Volume
-          {' '}
-          {volume}
-        </label>
+        <label htmlFor="volume">Volume {volume}</label>
         <input
           id="volume"
           type="range"
@@ -82,7 +70,7 @@ function App() {
           max={1}
           step={0.1}
           value={volume}
-          onChange={event => setVolume(event.target.valueAsNumber)}
+          onChange={(event) => setVolume(event.target.valueAsNumber)}
         />
 
         {voice != null && voiceOptions.length > 0 && (
@@ -93,13 +81,12 @@ function App() {
               value={voice.voiceURI}
               onChange={(event) => {
                 const voiceOption = voiceOptions.find(
-                  option => option.voiceURI === event.target.value,
+                  (option) => option.voiceURI === event.target.value,
                 )
-                if (voiceOption)
-                  setVoice(voiceOption)
+                if (voiceOption) setVoice(voiceOption)
               }}
             >
-              {voiceOptions.map(option => (
+              {voiceOptions.map((option) => (
                 <option key={option.voiceURI} value={option.voiceURI}>
                   {option.name}
                 </option>
@@ -112,7 +99,7 @@ function App() {
         <textarea
           id="text"
           value={text}
-          onChange={event => setText(event.target.value)}
+          onChange={(event) => setText(event.target.value)}
         />
 
         <button type="submit">Speak</button>

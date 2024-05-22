@@ -1,5 +1,5 @@
 export async function sleep(ms: number): Promise<void> {
-  await new Promise(r => setTimeout(r, ms))
+  await new Promise((r) => setTimeout(r, ms))
 }
 
 export async function getVoices(
@@ -8,8 +8,8 @@ export async function getVoices(
   let tries = 0
   let arr = window.speechSynthesis.getVoices()
   while (arr.length === 0) {
-    if (tries === maxTries)
-      break
+    if (tries === maxTries) break
+
     await sleep(500)
     arr = window.speechSynthesis.getVoices()
     ++tries
